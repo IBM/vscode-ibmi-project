@@ -15,7 +15,7 @@ We need to utilise existing language servers here so it is extensible and becaus
 Each language server would call this extension command to register a dependency provider for a given language idea.
 
 ```js
-# All interfaces are subject to change - this is not final
+// All interfaces are subject to change - this is not final
 commands.executeCommand(`vscode-ibmi-project`, `rpgle`, async (uri: string): Promise<ObjectDepInfo> => {
   // Do work to get the possible object name and any object this 'object' this dependson
   return {
@@ -56,6 +56,8 @@ Some nice UX touches for those dep trees
 * For nodes with many children, nodes should expand and collapse
 
 ## UI for project initialisation
+
+When we're happy with the ground work of the extension, it'd be nice to start supporting the move to git by making it easier for everyone.
 
 * A UI/wizard to help the user initialise a new 'i project'
 * Help the user setup which build tool the project should use
